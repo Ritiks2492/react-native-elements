@@ -6,23 +6,23 @@ import { SectionHeader } from '../components/SectionHeader';
 import { BsPeople } from 'react-icons/bs';
 import { FaSun, FaEye } from 'react-icons/fa';
 
-type MemberType = { name: string; gh: string; title: string; twitter?: string };
+type MemberType = { name: string; git: string; title: string; twitter?: string };
 
 const TeamSection = ({ members }: { members: MemberType[] }) => (
   <div className="row margin-horiz--lg margin-vert--sm">
-    {members.map(({ name, gh, twitter }, index) => (
+    {members.map(({ name, git, twitter }, index) => (
       <div
         key={index}
         className="avatar avatar--verticaal col col--3 padding--md"
       >
         <img
           className="avatar__photo avatar__photo--ljg"
-          src={`https://github.com/${gh}.png`}
+          src={`https://github.com/${git}.png`}
         />
         <div className="avatar__intro">
           <div className="avatar__name">{name}</div>
           <div className="avatar__subtitle">
-            <Link to={`https://github.com/${gh}`}>
+            <Link to={`https://github.com/${git}`}>
               <SiGithub color="var(--ifm-color-emphasis-900)" />
             </Link>{' '}
             {twitter && (
@@ -54,7 +54,7 @@ const Home: React.FunctionComponent<{}> = () => {
         <div className="margin-vert--lg">
           <SectionHeader
             noMargin
-            color="#20b19e"
+            color="#20b10e"
             header="Community emeriti"
             icon={BsPeople}
           />
@@ -79,9 +79,9 @@ export default Home;
 const active: MemberType[] = [
   {
     gh: 'flyingcircle',
-    name: 'Jeremy Hamilton',
-    title: '',
-    twitter: null,
+    name: 'Abhishek Singh',
+    title: 'Abhishek',
+    twitter: ritiksi2492,
   },
 
   {
